@@ -1,28 +1,22 @@
 import java.lang.Math;
 import java.util.Scanner;
+import java.io.IOException;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+
+
 public class KalkulatorSpalania {
-public static void main(String[] args) {
-int[] przebieg = new int[10]; // tabela z wartosciami przebiegow
-Float[] tankowanie = new Float[10]; // tabela z wartosciami tankowania
-for(int i=0; i<3; i++)
+public static void main(String[] args) throws FileNotFoundException 
 {
-System.out.println("Podaj przebieg w km");
-Scanner odczyt = new Scanner(System.in); //obiekt do odebrania danych od uzytkownika
+Dane dane = new Dane();
+dane.przebieg();
+dane.tankowanie();
+dane.ZapisPrzebieg(args);
+dane.ZapisTankowanie(args);
 
-przebieg[i] = Integer.parseInt(odczyt.nextLine()); //int
-System.out.println("Ile litrów zatankowałeś?");
 
-tankowanie[i] = Float.parseFloat(odczyt.nextLine()); //float
-if (i > 0)
-{
-System.out.println("Spalanie od ostatniego tankowania: "+tankowanie[i-1]/(przebieg[i]-przebieg[i-1])*100);
+
+System.out.println("-----Koniec programu-----");
 }
-else
-{
-System.out.println("---- pierwsze tankowanie------");
-}
-}
-System.out.println("Calkowite srednie spalanie:"+(tankowanie[0]+tankowanie[1])/(przebieg[2]-przebieg[0])*100);
-System.out.println("--------- koniec programu -----------");
-}
+//	System.out.println("Calkowite srednie spalanie:"+(tankowanie[0]+tankowanie[1])/(przebieg[2]-przebieg[0])*100);
 }
