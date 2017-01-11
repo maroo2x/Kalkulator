@@ -1,20 +1,23 @@
-import java.lang.Math;
-import java.util.Scanner;
+//import java.lang.Math;
+//import java.util.Scanner;
 import java.io.IOException;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
+//import java.io.FileNotFoundException;
+//import java.io.PrintWriter;
 
 
 public class KalkulatorSpalania {
-public static void main(String[] args) throws FileNotFoundException 
+public static void main(String[] args) throws IOException 
 {
 Dane dane = new Dane();
-dane.przebieg();
-dane.tankowanie();
-dane.ZapisPrzebieg(args);
-dane.ZapisTankowanie(args);
+int p = dane.przebieg();
+float t = dane.tankowanie();
 
-
+//dane.ZapisPrzebieg(p);
+//dane.ZapisTankowanie(t);
+//dane.Odczyt();
+Baza db = new Baza();
+//System.out.println(p+" "+t);
+db.insert(p, t);
 
 System.out.println("-----Koniec programu-----");
 }
