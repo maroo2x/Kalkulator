@@ -1,5 +1,5 @@
 //import java.lang.Math;
-//import java.util.Scanner;
+import java.util.Scanner;
 import java.io.IOException;
 //import java.io.FileNotFoundException;
 //import java.io.PrintWriter;
@@ -8,6 +8,7 @@ import java.io.IOException;
 public class KalkulatorSpalania {
 public static void main(String[] args) throws IOException 
 {
+	Scanner scan = new Scanner(System.in);
 Dane dane = new Dane();
 int p = dane.przebieg();
 float t = dane.tankowanie();
@@ -16,10 +17,10 @@ float t = dane.tankowanie();
 //dane.ZapisTankowanie(t);
 //dane.Odczyt();
 Baza db = new Baza();
-//System.out.println(p+" "+t);
 db.insert(p, t);
+int id = scan.nextInt();
+db.update(id);
 
 System.out.println("-----Koniec programu-----");
 }
-//	System.out.println("Calkowite srednie spalanie:"+(tankowanie[0]+tankowanie[1])/(przebieg[2]-przebieg[0])*100);
 }
