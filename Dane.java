@@ -1,9 +1,9 @@
 import java.util.Scanner;
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+//import java.io.BufferedReader;
+//import java.io.FileNotFoundException;
+//import java.io.FileReader;
 import java.io.FileWriter;
-import java.io.PrintWriter;
+//import java.io.PrintWriter;
 import java.io.IOException;
 public class Dane{
 	public int danePrzebieg;
@@ -21,7 +21,7 @@ public class Dane{
 		System.out.println("Ile litrów zatankowałeś?");
 		return Float.parseFloat(odczyt.nextLine()); //float
 	}
-	  public void ZapisPrzebieg (int danePrzebieg) throws IOException{
+	/*	  public void ZapisPrzebieg (int danePrzebieg) throws IOException{
 		  this.danePrzebieg = danePrzebieg;
 	      FileWriter zapis = new FileWriter("przebieg.txt", true);
 	      zapis.write(Integer.toString(this.danePrzebieg)+"\n");
@@ -33,6 +33,7 @@ public class Dane{
 	      zapis.write(Float.toString(this.daneTankowanie)+"\n");
 	      zapis.close();
 	  }
+	  
 	  public String Odczyt() throws IOException{
 //		   odczytPrzebieg = null;
 		   BufferedReader odczytPrzebieg = new BufferedReader(new FileReader("przebieg.txt"));
@@ -53,4 +54,5 @@ public class Dane{
 			odczytTankowanie.close();
 			return p;
 	  }
+*/
 }
